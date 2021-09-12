@@ -1,4 +1,5 @@
 from functions import storage
+from functions import register
 
 with open("config.toml") as file:
     config = toml.load(file)["sessions"]
