@@ -1,7 +1,7 @@
 from telethon.sync import TelegramClient
-import os, sys, asyncio
+import os, sys
 
-def sessions(path, api_id, api_hash):
+def sessions(path="sessions", api_id, api_hash):
     files, clients = os.listdir(path), []
     for file in files:
         if file.endswith(".session-journal"):
