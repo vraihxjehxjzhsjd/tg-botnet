@@ -10,4 +10,7 @@ def sessions(path="sessions", api_id, api_hash):
     for file in files:
         name = "sessions/" + file
         clients.append(TelegramClient(name, api_id, api_hash))
+    update = input("<red>update sessions?</red> <yellow>[y/n]</yellow> <cyan>(n)</cyan>: ")
+    if update.lower() in ["y", "ye", "yes"]:
+        return True
     return clients
