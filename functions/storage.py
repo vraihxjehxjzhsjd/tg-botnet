@@ -8,6 +8,6 @@ def sessions(path="sessions", api_id, api_hash):
             os.remove(os.path.join(path, file))
     files = os.listdir(path)
     for file in files:
-        _file = "sessions/" + file
-        clients.append(TelegramClient(_file, api_id, api_hash))
+        name = "sessions/" + file
+        clients.append(TelegramClient(name, api_id, api_hash))
     return clients
