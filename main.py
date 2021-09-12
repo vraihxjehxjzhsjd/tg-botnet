@@ -7,5 +7,8 @@ with open("config.toml") as file:
 api_id = config["api_id"]
 api_hash = config["api_hash"]
 
+if storage.update is True:
+    register.main()
+
 sessions = storage.sessions("sessions", api_id, api_hash)
 print("total accounts> %d \n" % len(sessions))
