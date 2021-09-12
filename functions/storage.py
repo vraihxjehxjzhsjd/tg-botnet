@@ -1,6 +1,12 @@
 from telethon.sync import TelegramClient
 import os, sys
 
+def update():
+    vote = input("\033[91mupdate sessions? \033[35m[y/n] \033[36m(n) \033[39m: ")
+    if vote.lower() in ["y", "ye", "yes"]
+        return True
+    return False
+
 def sessions(path="sessions", api_id, api_hash):
     files, clients = os.listdir(path), []
     for file in files:
