@@ -1,0 +1,9 @@
+[sessions]
+api_id =
+api_hash = "
+
+[flood]
+messages = ["твою мамашу поебем"]
+delay = [0, 0]
+count = 1
+trigger = "пук"
