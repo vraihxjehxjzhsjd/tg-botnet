@@ -14,7 +14,7 @@ def sessions(path="sessions", api_id, api_hash):
             os.remove(os.path.join(path, file))
     files = os.listdir(path)
     for file in files:
-        name = "sessions/" + file
+        name = "sessions/" + file.split(".", maxsplit=1)[0]
         clients.append(TelegramClient(name, api_id, api_hash))
     #update = input("<red>update sessions?</red> <yellow>[y/n]</yellow> <cyan>(n)</cyan>: ")
     return clients
