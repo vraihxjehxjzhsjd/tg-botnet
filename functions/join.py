@@ -1,4 +1,5 @@
 from telethon import functions
+from alive_progress import alive_bar
 import time
 
 class group:
@@ -8,7 +9,7 @@ class group:
         chat_id = 0
         link = input("\033[91mgroup\033[39m: ")
         delay = float(input("\033[91mdelay\033[39m: "))
-        with alive_bar(len(self.clients)):
+        with alive_bar(len(self.clients), title = "Bots joining"):
             for client in self.clients:
                 try:
                     client.connect()
