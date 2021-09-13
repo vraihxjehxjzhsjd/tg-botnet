@@ -7,7 +7,7 @@ with open("config.toml") as file:
 api_id = config["api_id"]
 api_hash = config["api_hash"]
 
-if storage.update is True:
+if storage.update("sessions") is True:
     register.session()
 
 sessions = storage.sessions("sessions", api_id, api_hash)
