@@ -5,8 +5,8 @@ class group:
         self.clients = clients
     def join(self):
         chat_id = 0
-        link = input("group : ")
-        delay = float(input("delay: "))
+        link = input("\033[91mgroup\033[39m: ")
+        delay = float(input("\033[91mdelay\033[39m: "))
         for client in self.clients:
             try:
                 client.connect()
