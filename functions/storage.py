@@ -1,7 +1,11 @@
 from telethon.sync import TelegramClient
 import os, sys
 
-def update():
+def update(path):
+    files = os.listdir(path)
+    for file in files:
+        if file.endswith(".session-journal")
+            os.remove(os.path.join(path, file))
     vote = input("\033[91mupdate sessions? \033[35m[y/n] \033[36m(n) \033[39m: ")
     if vote.lower() in ["y", "ye", "yes"]
         return True
